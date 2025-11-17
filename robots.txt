@@ -1,4 +1,2 @@
 User-agent: *
 Disallow: /assets/
-
-Sitemap: https://www.sergevandoorn.nl/sitemap.xml
