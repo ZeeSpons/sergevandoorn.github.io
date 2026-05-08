@@ -13,8 +13,67 @@
 <meta property="og:url" content="sergevandoorn.nl/contact">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
+
+
+<style>
+
+  body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e0e1da;
+  }
+
+.copy-mail {
+  cursor: pointer;
+  transition: color 0.2s;
+  font-size: 2rem;
+}
+
+.copy-mail:hover {
+  color: #ff4d4d; /* Kleur verandert bij hover */
+  text-decoration: underline;
+  font-size: 2.2rem;
+}
+
+/* Optioneel: een kleine melding als het gekopieerd is */
+.copy-success::after {
+  content: "Gekopieerd!";
+  font-size: 1rem;
+  color: darkgray;
+}
+
+</style>
+
 <head>
+
+
   <body>
-    contact@sergevandoorn.nl
-    <body>
+  
+    <a class="copy-mail"> contact@sergevandoorn.nl </a>
+    
+    </body>
+    
+    
+    
+    <script>
+    document.querySelectorAll('.copy-mail').forEach(element => {
+  element.addEventListener('click', function() {
+    const textToCopy = this.innerText;
+
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      // Optioneel: geef visuele feedback
+      this.classList.add('copy-success');
+      
+      // Verwijder de melding na 2 seconden
+      setTimeout(() => {
+        this.classList.remove('copy-success');
+      }, 2000);
+    }).catch(err => {
+      console.error('Fout bij kopiëren: ', err);
+    });
+  });
+});
+</script>
+
+
+    
 </html>
