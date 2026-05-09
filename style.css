@@ -1,0 +1,44 @@
+  body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e0e1da;
+  }
+
+.copy-mail {
+  cursor: pointer;
+  font-size: 2rem;
+  transition: color 0.2s;
+
+}
+
+.copy-mail:hover {
+  color: #ff4d4d; /* Kleur verandert bij hover */
+  text-decoration: underline;
+  font-size: 2.1rem;
+}
+
+/* Optioneel: een kleine melding als het gekopieerd is */
+.copy-success::after {
+  content: "Gekopieerd!";
+  font-size: 1rem;
+  color: darkgray;
+}
+
+.menu-btn {
+      font-size: 2rem;
+      padding: 2rem 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.20);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
+      background-color: #f0f0ed;
+      border-radius: 15px;
+}
+
+ .menu-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.30);
+    }
+
